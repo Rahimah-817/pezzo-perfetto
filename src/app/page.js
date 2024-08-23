@@ -12,22 +12,20 @@ export default function Home() {
         <SectionHeader subHeader={'Our story'} mainHeader={'About us'} />
         <div className='text-gray-500 max-w-lg mx-auto mt-4 flex flex-col gap-4'>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur.
+            Pezzo Perfetto is an online platform offering gourmet pizza
+            experiences for food lovers. The website features a diverse menu of
+            artisanal pizzas made with high-quality ingredients, from classic
+            Margherita to seasonal specialties, ensuring there&apos;s something
+            for everyone.
           </p>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
+            Pezzo Perfetto offers an intuitive interface for easy order
+            customization. With ingredient filters and a simple checkout,
+            customers can quickly enjoy their favorite pizzas.
           </p>
           <p>
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-            nisi ut aliquip ex ea commodo consequat.
+            Pezzo Perfetto focuses on sustainability by sourcing local
+            ingredients and reducing its environmental impact.
           </p>
         </div>
       </section>
@@ -41,7 +39,6 @@ export default function Home() {
           </a>
         </div>
       </section>
-      
     </>
   );
 }

@@ -2,8 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
-
 section.hero {
   @apply grid;
   grid-template-columns: 0.4fr 0.6fr;
+}
+
+input[type='email'],
+input[type='password'],
+input[type='text'] {
+  @apply block w-full my-2 rounded-xl;
+  @apply border p-2 border-gray-100 bg-gray-50;
+}
+
+button {
+  @apply block w-full text-gray-500 font-semibold;
+  @apply border border-gray-400 rounded-xl px-6 py-2;
+}
+button[type='submit'],
+.submit {
+  @apply border-0 bg-primary text-white;
 }
