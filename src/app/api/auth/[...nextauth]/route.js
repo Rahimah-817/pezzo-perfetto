@@ -6,7 +6,11 @@ export const authOptions = {
     CredentialsProvider({
       name: 'Credentials',
       credentials: {
-        username: { label: 'email', type: 'email', placeholder: 'test@example.com' },
+        username: {
+          label: 'email',
+          type: 'email',
+          placeholder: 'test@example.com',
+        },
         password: { label: 'Password', type: 'password' },
       },
       async authorize(credentials, req) {
@@ -16,7 +20,6 @@ export const authOptions = {
           return user;
         } else {
           return null;
-
         }
       },
     }),
