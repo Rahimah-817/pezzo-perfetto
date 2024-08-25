@@ -1,5 +1,4 @@
 import Hero from '@/components/layout/Hero';
-import Header from '@/components/layout/Header';
 import HomeMenu from '@/components/layout/HomeMenu';
 import SectionHeader from '@/components/layout/SectionHeader';
 
