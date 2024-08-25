@@ -34,7 +34,7 @@ export default function RegisterPage() {
     <section className='my-8'>
       <h1 className='text-center text-primary text-4xl mb-4'>Register</h1>
       {userCreated && (
-        <div className='my-4 text-center text-gray-600'> 
+        <div className='my-4 text-center text-gray-600'>
           User created. Now you can{' '}
           <Link href={'/login'} className='underline'>
             Login
@@ -46,7 +46,7 @@ export default function RegisterPage() {
           An error has occured. Please try again later
         </div>
       )}
-      <form className='block max-w-xs mx-auto' onSubmit={handleFormSubmit}>
+      <form className='max-w-xs mx-auto' onSubmit={handleFormSubmit}>
         <input
           type='email'
           placeholder='email'
@@ -61,7 +61,9 @@ export default function RegisterPage() {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
-        <button type='submit'>Register</button>
+        <button type='submit' disabled={creatingUser}>
+          Register
+        </button>
         <div className='my-4 text-sm text-center text-gray-500'>
           or login with provider
         </div>
@@ -70,7 +72,7 @@ export default function RegisterPage() {
           Login with google
         </button>
         <div className='text-center text-gray-500 mt-4 text-sm border-t pt-2'>
-         Do you have an account?{' '}
+          Do you have an account?{' '}
           <Link className='underline' href={'/login'}>
             Login
           </Link>

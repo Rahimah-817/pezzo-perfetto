@@ -1,10 +1,15 @@
+import * as mongoose from 'mongoose';
 import NextAuth from 'next-auth';
 import CredentialsProvider from 'next-auth/providers/credentials';
+import { User } from '@/models/User';
+import bcrypt from 'bcrypt';
 
 export const authOptions = {
+  secret: process.env.SECRET,
   providers: [
     CredentialsProvider({
       name: 'Credentials',
+      id: 'credentials',
       credentials: {
         username: {
           label: 'email',
@@ -14,13 +19,18 @@ export const authOptions = {
         password: { label: 'Password', type: 'password' },
       },
       async authorize(credentials, req) {
-        const user = { id: '1', name: 'J Smith', email: 'jsmith@example.com' };
+        const email = credentials?.email;
+        const password = credentials?.password;
 
-        if (user) {
+        mongoose.connect(process.env.MONGO_URL);
+        const user = await User.findOne({ email });
+        const passwordOk = user && bcrypt.compareSync(password, user.password);
+
+        if (passwordOk) {
           return user;
-        } else {
-          return null;
         }
+
+        return null;
       },
     }),
   ],
